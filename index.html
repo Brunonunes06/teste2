@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra os melhores cafés especiais do Brasil no Café Aroma. Grãos selecionados, torrefação artesanal e sabores únicos.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <title>Café Aroma - Os Melhores Cafés Especiais do Brasil</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <i class="fas fa-coffee"></i>
+                    Café Aroma
+                </a>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#produtos" class="nav-link">Produtos</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#avaliacoes" class="nav-link">Avaliações</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+                
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">O Melhor</span>
+                <span class="title-line"><span class="highlight">Café</span> do Brasil</span>
+            </h1>
+            <p class="hero-subtitle">
+                Descubra sabores únicos com nossos cafés especiais, 
+                cultivados com carinho e torrados artesanalmente para você.
+            </p>
+            <div class="hero-buttons">
+                <a href="#produtos" class="btn btn-primary">
+                    <i class="fas fa-coffee"></i>
+                    Ver Produtos
+                </a>
+                <a href="#sobre" class="btn btn-secondary">
+                    <i class="fas fa-play"></i>
+                    Nossa História
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Produtos Section -->
+    <section id="produtos" class="produtos">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title">Nossos Produtos</h2>
+                <p class="section-subtitle">Cafés especiais selecionados com carinho</p>
+            </div>
+            
+            <div class="produtos-filter scroll-animate">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="especiais">Especiais</button>
+                <button class="filter-btn" data-filter="gourmet">Gourmet</button>
+                <button class="filter-btn" data-filter="organicos">Orgânicos</button>
+            </div>
+            
+            <div class="loading-produtos" id="loading-produtos">
+                <div class="spinner"></div>
+                <p>Carregando produtos...</p>
+            </div>
+            
+            <div class="produtos-grid" id="produtos-grid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text scroll-animate">
+                    <div class="section-header">
+                        <h2 class="section-title">Nossa História</h2>
+                        <p class="section-subtitle">Paixão pelo café desde 1985</p>
+                    </div>
+                    <div class="sobre-description">
+                        <p>
+                            Há mais de 35 anos, o Café Aroma tem sido sinônimo de qualidade e tradição. 
+                            Nossa jornada começou com uma pequena torrefação familiar e cresceu para se 
+                            tornar uma das principais referências em cafés especiais do Brasil.
+                        </p>
+                        <p>
+                            Trabalhamos diretamente com produtores locais, garantindo não apenas a melhor 
+                            qualidade dos grãos, mas também práticas sustentáveis que beneficiam toda a 
+                            cadeia produtiva.
+                        </p>
+                    </div>
+                    <div class="sobre-stats">
+                        <div class="stat-item">
+                            <span class="stat-number scroll-animate" data-target="35">0</span>
+                            <span class="stat-label">Anos de Experiência</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number scroll-animate" data-target="150">0</span>
+                            <span class="stat-label">Produtores Parceiros</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number scroll-animate" data-target="50000">0</span>
+                            <span class="stat-label">Clientes Satisfeitos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-image scroll-animate">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Processo de torrefação artesanal">
+                        <div class="image-overlay">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avaliações Section -->
+    <section id="avaliacoes" class="avaliacoes">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+                <p class="section-subtitle">Experiências reais de quem já provou nossos cafés</p>
+            </div>
+            
+            <div class="avaliacoes-carousel" id="avaliacoes-carousel">
+                <!-- Carousel content will be dynamically loaded -->
+            </div>
+            
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn" id="next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Estamos aqui para ajudar você a encontrar o café perfeito</p>
+            </div>
+            
+            <div class="contato-content">
+                <div class="contato-info scroll-animate">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Endereço</h3>
+                            <p>Rua do Café, 123<br>Centro, São Paulo - SP<br>CEP: 01234-567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Telefone</h3>
+                            <p>(11) 1234-5678<br>(11) 98765-4321</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>contato@cafearoma.com.br<br>vendas@cafearoma.com.br</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Horário de Funcionamento</h3>
+                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 14h<br>Domingo: Fechado</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contato-form scroll-animate" id="contato-form">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="duvidas">Dúvidas sobre produtos</option>
+                            <option value="pedidos">Pedidos e entregas</option>
+                            <option value="sugestoes">Sugestões</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-coffee"></i>
+                        Café Aroma
+                    </div>
+                    <p>Há mais de 35 anos oferecendo os melhores cafés especiais do Brasil. Qualidade, tradição e sabor em cada xícara.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Produtos</h4>
+                    <ul>
+                        <li><a href="#">Cafés Especiais</a></li>
+                        <li><a href="#">Cafés Gourmet</a></li>
+                        <li><a href="#">Cafés Orgânicos</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Receba novidades e ofertas especiais</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Seu email" required>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Café Aroma. Todos os direitos reservados.</p>
+                <p>Feito com <i class="fas fa-heart"></i> para os amantes de café</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
