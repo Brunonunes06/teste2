@@ -205,11 +205,6 @@ body {
     background: var(--background-light);
 }
 
-.nav-link:hover {
-    background-color: #000000;
-    border: 10px solid gray;
-}
-
 .hamburger {
     display: none;
     flex-direction: column;
